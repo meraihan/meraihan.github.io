@@ -1,5 +1,3 @@
-/* Typography */
-
 html {
 	font-family: 'Roboto', sans-serif;
 }
@@ -33,6 +31,11 @@ html {
 }
 
 /* Custom Styles */
+nav {
+	display: block;
+	color: #303F9F;
+	background: #FAFAFA;
+}
 
 main {
 	display: flex;
@@ -41,6 +44,11 @@ main {
 	justify-content: center;
 	padding: 0 30px;
 	text-align: center;
+}
+
+main > .profile-photo img {
+	border: 1px black solid;
+	border-radius: 50%;
 }
 
 main > .intro {
@@ -68,4 +76,9 @@ main > .tagline {
 	margin-left: 0.675rem;;
 	width: 2.65rem;
 	height: 2.65rem;
+}
+
+a:link, a:visited, a:hover, a:active {
+	text-decoration: none;
+	color: inherit;
 }
