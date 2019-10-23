@@ -178,7 +178,7 @@
 												<li><u><a class="text-hover-image-microfin" title="Confidentials" href="#">Microfin payment aggregator(Backend Service)</a></u></li>
 												<li><u><a title="Confidentials" href="#">Smart Meter Middle-wire Service</a></u></li>
 												<li><u><a class="text-hover-image-proshomon" target="_blank" href="https://proshomon.net/">Proshomon Smart health Card Management System</a></u></li>
-												<li><u><a target="_blank" href="https://github.com/meraihan/NewsDirectory">News Directory Web Portal</a></u></li>
+												<li><u><a class="text-hover-image-newsdirectory" target="_blank" href="https://github.com/meraihan/NewsDirectory">News Directory Web Portal</a></u></li>
 												<li><u><a title="Confidentials" href="#">Al-Zahir Travels and Tours Web Portal</a></u></li>
 												<li><u><a title="Confidentials" href="#">E-Shop Online Shopping(Backend Service)</a></u></li>
 												<li><u><a class="text-hover-image-library" target="_blank" href="https://github.com/meraihan/Library_NSTU">Library Management System of NSTU</a></u></li>
@@ -444,6 +444,7 @@
 		var pathToImageIssueTracker = "assets/images/issuetracker.JPG";
 		var pathToImage365a = "assets/images/365a.JPG";
 		var pathToImageRoutvox = "assets/images/routvox.JPG";
+		var pathToImageNewsdirectory = "assets/images/newsdirectory.JPG"
 
 		$(".text-hover-image-pay365").hover(function (e) {
 			$("body").append("<p id='image-when-hovering-text-pay365'><img src='" + pathToImagePay365 + "'/></p>");
@@ -574,6 +575,25 @@
 
 		$(".text-hover-image-routvox").mousemove(function (e) {
 			$("#image-when-hovering-text-routvox")
+			.css("top", (e.pageY - yOff) + "px")
+			.css("left", (e.pageX + xOff) + "px");
+		});
+		
+		$(".text-hover-image-newsdirectory").hover(function (e) {
+			$("body").append("<p id='image-when-hovering-text-newsdirectory'><img src='" + pathToImageNewsdirectory + "'/></p>");
+			$("#image-when-hovering-text-newsdirectory")
+			.css("position", "absolute")
+			.css("top", (e.pageY - yOff) + "px")
+			.css("left", (e.pageX + xOff) + "px")
+			.fadeIn("fast");
+		},
+
+		function () {
+			$("#image-when-hovering-text-newsdirectory").remove();
+		});
+
+		$(".text-hover-image-newsdirectory").mousemove(function (e) {
+			$("#image-when-hovering-text-newsdirectory")
 			.css("top", (e.pageY - yOff) + "px")
 			.css("left", (e.pageX + xOff) + "px");
 		});
