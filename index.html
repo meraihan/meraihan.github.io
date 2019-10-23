@@ -161,7 +161,7 @@
 						    </div>
 					    </section><!--//experience-section-->
 
-
+https://meraihan.github.io/
 
 						<section class="resume-section experience-section mb-5">
 						    <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Projects</h2>
@@ -174,17 +174,18 @@
 										    <p align="justify">I have worked with a lot of projects since my university life. I had a passion to be a good programmer. That inspired me a lot to achieve my desire. Sometimes I smiled on my code which I wrote when I was a beginner-level programmer. But this code inspired me now to write good code. Here, the following projects which I have worked with. If you have time, feel free to go to my repository and please don't laugh on my code I am still learning too. Some projects are confidentials, so I couldn't provide link of that</p>
 										  
 										    <ul>
-											    <li><u><a target="_blank" href="https://pay365online.com/">Pay365 Payment Wallet Backend Service</a></u></li>
-											    <li><u><a title="Confidentials" href="#">Microfin payment aggregator(Backend Service)</a></u></li>
+											    <li><u><a class="text-hover-image-pay365" target="_blank" href="https://pay365online.com/">Pay365 Payment Wallet Backend Service</a></u></li>
+											    <li><u><a class="text-hover-image-microfin" title="Confidentials" href="#">Microfin payment aggregator(Backend Service)</a></u></li>
 											    <li><u><a title="Confidentials" href="#">Smart Meter Middle-wire Service</a></u></li>
-											    <li><u><a target="_blank" href="https://proshomon.net/">Proshomon Smart health Card Management System</a></u></li>
+											    <li><u><a class="text-hover-image-proshomon" target="_blank" href="https://proshomon.net/">Proshomon Smart health Card Management System</a></u></li>
 											    <li><u><a target="_blank" href="https://github.com/meraihan/NewsDirectory">News Directory Web Portal</a></u></li>
 											    <li><u><a title="Confidentials" href="#">Al-Zahir Travels and Tours Web Portal</a></u></li>
 												<li><u><a title="Confidentials" href="#">E-Shop Online Shopping(Backend Service)</a></u></li>
-												<li><u><a title="Confidentials" href="#">Al-Zahir Travels and Tours Web Portal</a></u></li>
-												<li><u><a target="_blank" href="https://github.com/meraihan/Library_NSTU">Library Management System of NSTU</a></u></li>
-												<li><u><a title="Confidentials" href="#">Issue Tracker(SBAC Bank Ticketing System)</a></u></li>
+												<li><u><a class="text-hover-image-library" target="_blank" href="https://github.com/meraihan/Library_NSTU">Library Management System of NSTU</a></u></li>
+												<li><u><a class="text-hover-image-issuetracker" title="Confidentials" href="#">Issue Tracker(SBAC Bank Ticketing System)</a></u></li>
 												<li><u><a title="Confidentials" href="#">Shobar Dokan Online Shop Web Portal</a></u></li>
+												<li><u><a class="text-hover-image-365a" title="Confidentials" href="#">365Apparels Web Portal</a></u></li>
+												<li><u><a class="text-hover-image-routvox" title="Confidentials" href="#">RoutVox Backend Service and Web Portal(Care sharing service in USA)</a></u></li>
 										    </ul>
 										   
 									    </div><!--//resume-timeline-item-desc-->
@@ -408,4 +409,150 @@
 
 </body>
 </html> 
+<script type="text/javascript" src="js/jquery-3.4.1.js"></script>
+<script type="text/javascript">
+	$(document).ready(function () {
+    var yOff = 15;
+    var xOff = 20;
+    var pathToImagePay365 = "assets/images/pay365.jpg";
+    var pathToImageMicrofin = "assets/images/microfin.jpg";
+    var pathToImageProshomon = "assets/images/proshomon.jpg";
+    var pathToImageLibrary = "assets/images/library.jpg";
+    var pathToImageIssueTracker = "assets/images/issuetracker.jpg";
+    var pathToImage365a = "assets/images/365a.jpg";
+    var pathToImageRoutvox = "assets/images/routvox.jpg";
 
+    $(".text-hover-image-pay365").hover(function (e) {
+        $("body").append("<p id='image-when-hovering-text-pay365'><img src='" + pathToImagePay365 + "'/></p>");
+        $("#image-when-hovering-text-pay365")
+            .css("position", "absolute")
+            .css("top", (e.pageY - yOff) + "px")
+            .css("left", (e.pageX + xOff) + "px")
+            .fadeIn("fast");
+    },
+
+    function () {
+        $("#image-when-hovering-text-pay365").remove();
+    });
+
+    $(".text-hover-image-pay365").mousemove(function (e) {
+        $("#image-when-hovering-text-pay365")
+            .css("top", (e.pageY - yOff) + "px")
+            .css("left", (e.pageX + xOff) + "px");
+    });
+
+    $(".text-hover-image-microfin").hover(function (e) {
+        $("body").append("<p id='image-when-hovering-text-microfin'><img src='" + pathToImageMicrofin + "'/></p>");
+        $("#image-when-hovering-text-microfin")
+            .css("position", "absolute")
+            .css("top", (e.pageY - yOff) + "px")
+            .css("left", (e.pageX + xOff) + "px")
+            .fadeIn("fast");
+    },
+
+    function () {
+        $("#image-when-hovering-text-microfin").remove();
+    });
+
+    $(".text-hover-image-microfin").mousemove(function (e) {
+        $("#image-when-hovering-text-microfin")
+            .css("top", (e.pageY - yOff) + "px")
+            .css("left", (e.pageX + xOff) + "px");
+    });
+
+    $(".text-hover-image-proshomon").hover(function (e) {
+        $("body").append("<p id='image-when-hovering-text-proshomon'><img src='" + pathToImageProshomon + "'/></p>");
+        $("#image-when-hovering-text-proshomon")
+            .css("position", "absolute")
+            .css("top", (e.pageY - yOff) + "px")
+            .css("left", (e.pageX + xOff) + "px")
+            .fadeIn("fast");
+    },
+
+    function () {
+        $("#image-when-hovering-text-proshomon").remove();
+    });
+
+    $(".text-hover-image-proshomon").mousemove(function (e) {
+        $("#image-when-hovering-text-proshomon")
+            .css("top", (e.pageY - yOff) + "px")
+            .css("left", (e.pageX + xOff) + "px");
+    });
+
+    $(".text-hover-image-library").hover(function (e) {
+        $("body").append("<p id='image-when-hovering-text-library'><img src='" + pathToImageLibrary + "'/></p>");
+        $("#image-when-hovering-text-library")
+            .css("position", "absolute")
+            .css("top", (e.pageY - yOff) + "px")
+            .css("left", (e.pageX + xOff) + "px")
+            .fadeIn("fast");
+    },
+
+    function () {
+        $("#image-when-hovering-text-library").remove();
+    });
+
+    $(".text-hover-image-library").mousemove(function (e) {
+        $("#image-when-hovering-text-library")
+            .css("top", (e.pageY - yOff) + "px")
+            .css("left", (e.pageX + xOff) + "px");
+    });
+
+    $(".text-hover-image-issuetracker").hover(function (e) {
+        $("body").append("<p id='image-when-hovering-text-issuetracker'><img src='" + pathToImageIssueTracker + "'/></p>");
+        $("#image-when-hovering-text-issuetracker")
+            .css("position", "absolute")
+            .css("top", (e.pageY - yOff) + "px")
+            .css("left", (e.pageX + xOff) + "px")
+            .fadeIn("fast");
+    },
+
+    function () {
+        $("#image-when-hovering-text-issuetracker").remove();
+    });
+
+    $(".text-hover-image-issuetracker").mousemove(function (e) {
+        $("#image-when-hovering-text-issuetracker")
+            .css("top", (e.pageY - yOff) + "px")
+            .css("left", (e.pageX + xOff) + "px");
+    });
+
+     $(".text-hover-image-365a").hover(function (e) {
+        $("body").append("<p id='image-when-hovering-text-365a'><img src='" + pathToImage365a + "'/></p>");
+        $("#image-when-hovering-text-365a")
+            .css("position", "absolute")
+            .css("top", (e.pageY - yOff) + "px")
+            .css("left", (e.pageX + xOff) + "px")
+            .fadeIn("fast");
+    },
+
+    function () {
+        $("#image-when-hovering-text-365a").remove();
+    });
+
+    $(".text-hover-image-365a").mousemove(function (e) {
+        $("#image-when-hovering-text-365a")
+            .css("top", (e.pageY - yOff) + "px")
+            .css("left", (e.pageX + xOff) + "px");
+    });
+
+     $(".text-hover-image-routvox").hover(function (e) {
+        $("body").append("<p id='image-when-hovering-text-routvox'><img src='" + pathToImageRoutvox + "'/></p>");
+        $("#image-when-hovering-text-routvox")
+            .css("position", "absolute")
+            .css("top", (e.pageY - yOff) + "px")
+            .css("left", (e.pageX + xOff) + "px")
+            .fadeIn("fast");
+    },
+
+    function () {
+        $("#image-when-hovering-text-routvox").remove();
+    });
+
+    $(".text-hover-image-routvox").mousemove(function (e) {
+        $("#image-when-hovering-text-routvox")
+            .css("top", (e.pageY - yOff) + "px")
+            .css("left", (e.pageX + xOff) + "px");
+    });
+});
+</script>
