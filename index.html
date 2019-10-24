@@ -182,7 +182,7 @@
 												<li><u><a title="Confidentials" href="#">Smart Meter Middle-wire Service</a></u></li>
 												<li><u><a class="text-hover-image-proshomon" target="_blank" href="https://proshomon.net/">Proshomon Smart health Card Management System</a></u></li>
 												<li><u><a class="text-hover-image-newsdirectory" target="_blank" href="https://github.com/meraihan/NewsDirectory">News Directory Web Portal</a></u></li>
-												<li><u><a title="Confidentials" href="#">Al-Zahir Travels and Tours Web Portal</a></u></li>
+												<li><u><a class="text-hover-image-alzahir" title="Confidentials" href="#">Al-Zahir Travels and Tours Web Portal</a></u></li>
 												<li><u><a title="Confidentials" href="#">E-Shop Online Shopping(Backend Service)</a></u></li>
 												<li><u><a class="text-hover-image-library" target="_blank" href="https://github.com/meraihan/Library_NSTU">Library Management System of NSTU</a></u></li>
 												<li><u><a class="text-hover-image-issuetracker" title="Confidentials" href="#">Issue Tracker(SBAC Bank Ticketing System)</a></u></li>
@@ -452,6 +452,7 @@
 		var pathTOImageDataScience = "assets/images/data_science.JPG";
 		var pathToImageStatistics = "assets/images/statistics.JPG";
 		var pathToImageR = "assets/images/rprog.JPG";
+		var pathToImageAlzahir = "assets/images/alzahir.jpg";
 
 		$(".text-hover-image-pay365").hover(function (e) {
 			$("body").append("<p id='image-when-hovering-text-pay365'><img src='" + pathToImagePay365 + "'/></p>");
@@ -675,8 +676,27 @@
 			$("#image-when-hovering-text-r").remove();
 		});
 
-		$(".text-hover-image-r").mousemove(function (e) {
+		$(".text-hover-image-alzahir").mousemove(function (e) {
 			$("#image-when-hovering-text-r")
+			.css("top", (e.pageY - yOff) + "px")
+			.css("left", (e.pageX + xOff) + "px");
+		});
+
+		$(".text-hover-image-alzahir").hover(function (e) {
+			$("body").append("<p id='image-when-hovering-text-alzahir'><img src='" + pathToImageAlzahir + "'/></p>");
+			$("#image-when-hovering-text-alzahir")
+			.css("position", "absolute")
+			.css("top", (e.pageY - yOff) + "px")
+			.css("left", (e.pageX + xOff) + "px")
+			.fadeIn("fast");
+		},
+
+		function () {
+			$("#image-when-hovering-text-alzahir").remove();
+		});
+
+		$(".text-hover-image-alzahir").mousemove(function (e) {
+			$("#image-when-hovering-text-alzahir")
 			.css("top", (e.pageY - yOff) + "px")
 			.css("left", (e.pageX + xOff) + "px");
 		});
