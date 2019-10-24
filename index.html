@@ -208,10 +208,10 @@
 											<p align="justify">A crazy Java geek but has a passion for Data Science, NLP and so on. As an initial step, I have completed the following online course offered by Coursera. Will prefer to work in this field whenever I get a chance </p>
 
 											<ul>
-												<li><u><a target="_blank" href="https://goo.gl/kZPt95">Machine Learning offered by Stanford University</a></u></li>
-												<li><u><a target="_blank" href="https://goo.gl/FD6mW2">Basic Statistics offered by University of Amsterdam</a></u></li>
-												<li><u><a target="_blank" href="https://goo.gl/522YKp">The Data Scientist's Toolbox offered by Johns Hopkins University</a></u></li>
-												<li><u><a target="_blank" href="https://goo.gl/N2Lt4a">R Programming offered by Johns Hopkins University</a></u></li>
+												<li><u><a class="text-hover-image-machine" target="_blank" href="https://goo.gl/kZPt95">Machine Learning offered by Stanford University</a></u></li>
+												<li><u><a class="text-hover-image-statistics" target="_blank" href="https://goo.gl/FD6mW2">Basic Statistics offered by University of Amsterdam</a></u></li>
+												<li><u><a class="text-hover-image-datascience" target="_blank" href="https://goo.gl/522YKp">The Data Scientist's Toolbox offered by Johns Hopkins University</a></u></li>
+												<li><u><a class="text-hover-image-r" target="_blank" href="https://goo.gl/N2Lt4a">R Programming offered by Johns Hopkins University</a></u></li>
 											</ul>
 
 										</div><!--//resume-timeline-item-desc-->
@@ -443,7 +443,11 @@
 		var pathToImageIssueTracker = "assets/images/issuetracker.JPG";
 		var pathToImage365a = "assets/images/365a.JPG";
 		var pathToImageRoutvox = "assets/images/routvox.JPG";
-		var pathToImageNewsdirectory = "assets/images/newsdirectory.JPG"
+		var pathToImageNewsdirectory = "assets/images/newsdirectory.JPG";
+		var pathToImageMachineLearning = "assets/images/machine_learning.JPG";
+		var pathTOImageDataScience = "assets/images/data_science.JPG";
+		var pathToImageStatistics = "assets/images/statistics.JPG";
+		var pathToImageR = "assets/images/rprog.JPG";
 
 		$(".text-hover-image-pay365").hover(function (e) {
 			$("body").append("<p id='image-when-hovering-text-pay365'><img src='" + pathToImagePay365 + "'/></p>");
@@ -593,6 +597,82 @@
 
 		$(".text-hover-image-newsdirectory").mousemove(function (e) {
 			$("#image-when-hovering-text-newsdirectory")
+			.css("top", (e.pageY - yOff) + "px")
+			.css("left", (e.pageX + xOff) + "px");
+		});
+
+		$(".text-hover-image-machine").hover(function (e) {
+			$("body").append("<p id='image-when-hovering-text-machine'><img src='" + pathToImageMachineLearning + "'/></p>");
+			$("#image-when-hovering-text-machine")
+			.css("position", "absolute")
+			.css("top", (e.pageY - yOff) + "px")
+			.css("left", (e.pageX + xOff) + "px")
+			.fadeIn("fast");
+		},
+
+		function () {
+			$("#image-when-hovering-text-machine").remove();
+		});
+
+		$(".text-hover-image-machine").mousemove(function (e) {
+			$("#image-when-hovering-text-machine")
+			.css("top", (e.pageY - yOff) + "px")
+			.css("left", (e.pageX + xOff) + "px");
+		});
+
+		$(".text-hover-image-datascience").hover(function (e) {
+			$("body").append("<p id='image-when-hovering-text-datascience'><img src='" + pathTOImageDataScience + "'/></p>");
+			$("#image-when-hovering-text-datascience")
+			.css("position", "absolute")
+			.css("top", (e.pageY - yOff) + "px")
+			.css("left", (e.pageX + xOff) + "px")
+			.fadeIn("fast");
+		},
+
+		function () {
+			$("#image-when-hovering-text-datascience").remove();
+		});
+
+		$(".text-hover-image-datascience").mousemove(function (e) {
+			$("#image-when-hovering-text-datascience")
+			.css("top", (e.pageY - yOff) + "px")
+			.css("left", (e.pageX + xOff) + "px");
+		});
+
+		$(".text-hover-image-statistics").hover(function (e) {
+			$("body").append("<p id='image-when-hovering-text-statistics'><img src='" + pathToImageStatistics + "'/></p>");
+			$("#image-when-hovering-text-statistics")
+			.css("position", "absolute")
+			.css("top", (e.pageY - yOff) + "px")
+			.css("left", (e.pageX + xOff) + "px")
+			.fadeIn("fast");
+		},
+
+		function () {
+			$("#image-when-hovering-text-statistics").remove();
+		});
+
+		$(".text-hover-image-statistics").mousemove(function (e) {
+			$("#image-when-hovering-text-statistics")
+			.css("top", (e.pageY - yOff) + "px")
+			.css("left", (e.pageX + xOff) + "px");
+		});
+
+		$(".text-hover-image-r").hover(function (e) {
+			$("body").append("<p id='image-when-hovering-text-r'><img src='" + pathToImageR + "'/></p>");
+			$("#image-when-hovering-text-r")
+			.css("position", "absolute")
+			.css("top", (e.pageY - yOff) + "px")
+			.css("left", (e.pageX + xOff) + "px")
+			.fadeIn("fast");
+		},
+
+		function () {
+			$("#image-when-hovering-text-r").remove();
+		});
+
+		$(".text-hover-image-r").mousemove(function (e) {
+			$("#image-when-hovering-text-r")
 			.css("top", (e.pageY - yOff) + "px")
 			.css("left", (e.pageX + xOff) + "px");
 		});
