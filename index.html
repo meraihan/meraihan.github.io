@@ -355,7 +355,7 @@
 										<div class="resume-degree font-weight-bold">B.Sc. in Computer Science &amp; Telecommunication Engineering</div>
 										<div class="resume-degree-org">Noakhali Science &amp; Technology University(NSTU)</div>
 										<div class="resume-degree-time">2011 - 2016</div>
-										<div class="small">Thesis: <a href="https://drive.google.com/file/d/0B9wmN58csoQaN2lzZWhPYnN4S1E/view?usp=sharing" target="_blank"><u>SQL injection analysis, detection &amp; prevention</u></a></div>
+										<div class="small">Thesis: <a class="text-hover-image-thesis" href="https://drive.google.com/file/d/0B9wmN58csoQaN2lzZWhPYnN4S1E/view?usp=sharing" target="_blank"><u>SQL injection analysis, detection &amp; prevention</u></a></div>
 									</li>
 									<li>
 										<div class="resume-degree font-weight-bold">H.S.C Science</div>
@@ -503,6 +503,7 @@
 		var pathToImageR = "assets/images/rprog.JPG";
 		var pathToImageAlzahir = "assets/images/alzahir.jpg";
 		var pathToImageDataCamp = "assets/images/datacamp.jpg";
+		var pathToImageThesis = "assets/images/thesis.jpg";
 
 		$(".text-hover-image-pay365").hover(function (e) {
 			$("body").append("<p id='image-when-hovering-text-pay365'><img src='" + pathToImagePay365 + "'/></p>");
@@ -766,6 +767,25 @@
 
 		$(".text-hover-image-datacamp").mousemove(function (e) {
 			$("#image-when-hovering-text-datacamp")
+			.css("top", (e.pageY - yOff) + "px")
+			.css("left", (e.pageX + xOff) + "px");
+		});
+
+		$(".text-hover-image-thesis").hover(function (e) {
+			$("body").append("<p id='image-when-hovering-text-thesis'><img src='" + pathToImageThesis + "'/></p>");
+			$("#image-when-hovering-text-thesis")
+			.css("position", "absolute")
+			.css("top", (e.pageY - yOff) + "px")
+			.css("left", (e.pageX + xOff) + "px")
+			.fadeIn("fast");
+		},
+
+		function () {
+			$("#image-when-hovering-text-thesis").remove();
+		});
+
+		$(".text-hover-image-thesis").mousemove(function (e) {
+			$("#image-when-hovering-text-thesis")
 			.css("top", (e.pageY - yOff) + "px")
 			.css("left", (e.pageX + xOff) + "px");
 		});
