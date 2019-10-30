@@ -217,6 +217,7 @@
 												<li><u><a class="text-hover-image-datascience" target="_blank" href="https://goo.gl/522YKp">The Data Scientist's Toolbox offered by Johns Hopkins University</a></u></li>
 												<li><u><a class="text-hover-image-r" target="_blank" href="https://goo.gl/N2Lt4a">R Programming offered by Johns Hopkins University</a></u></li>
 												<li><u><a class="text-hover-image-datacamp" target="_blank" href="#">Basic Statistics offered by Data Camp</a></u></li>
+												<li><u><a class="text-hover-image-python" target="_blank" href="#">Introduction to Python offered by Data Camp</a></u></li>
 											</ul>
 
 										</div><!--//resume-timeline-item-desc-->
@@ -516,6 +517,7 @@
 		var pathToImageAlzahir = "assets/images/alzahir.jpg";
 		var pathToImageDataCamp = "assets/images/datacamp.JPG";
 		var pathToImageThesis = "assets/images/thesis.JPG";
+		var pathToImagePython = "assets/images/python.JPG";
 
 		$(".text-hover-image-pay365").hover(function (e) {
 			$("body").append("<p id='image-when-hovering-text-pay365'><img src='" + pathToImagePay365 + "'/></p>");
@@ -798,6 +800,25 @@
 
 		$(".text-hover-image-thesis").mousemove(function (e) {
 			$("#image-when-hovering-text-thesis")
+			.css("top", (e.pageY - yOff) + "px")
+			.css("left", (e.pageX + xOff) + "px");
+		});
+
+		$(".text-hover-image-python").hover(function (e) {
+			$("body").append("<p id='image-when-hovering-text-python'><img src='" + pathToImagePython + "'/></p>");
+			$("#image-when-hovering-text-python")
+			.css("position", "absolute")
+			.css("top", (e.pageY - yOff) + "px")
+			.css("left", (e.pageX + xOff) + "px")
+			.fadeIn("fast");
+		},
+
+		function () {
+			$("#image-when-hovering-text-python").remove();
+		});
+
+		$(".text-hover-image-python").mousemove(function (e) {
+			$("#image-when-hovering-text-python")
 			.css("top", (e.pageY - yOff) + "px")
 			.css("left", (e.pageX + xOff) + "px");
 		});
