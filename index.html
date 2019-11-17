@@ -216,8 +216,9 @@
 												<li><u><a class="text-hover-image-statistics" target="_blank" href="https://goo.gl/FD6mW2">Basic Statistics offered by University of Amsterdam</a></u></li>
 												<li><u><a class="text-hover-image-datascience" target="_blank" href="https://goo.gl/522YKp">The Data Scientist's Toolbox offered by Johns Hopkins University</a></u></li>
 												<li><u><a class="text-hover-image-r" target="_blank" href="https://goo.gl/N2Lt4a">R Programming offered by Johns Hopkins University</a></u></li>
-												<li><u><a class="text-hover-image-datacamp" target="_blank" href="https://drive.google.com/file/d/1CEmlv4UjPVKsxXFNeV7QVS0pFnv3boyh/view?usp=sharing">Basic Statistics offered by Data Camp</a></u></li>
-												<li><u><a class="text-hover-image-python" target="_blank" href="https://drive.google.com/file/d/1ThhKdSCOoo5OAa72jDPgNgb0CLsVRBdu/view?usp=sharing">Introduction to Python offered by Data Camp</a></u></li>
+												<li><u><a class="text-hover-image-datacamp" target="_blank" href="https://www.datacamp.com/statement-of-accomplishment/course/2b46bba06b4b275c4ab2aa045d07582f072060dc">Basic Statistics offered by Data Camp</a></u></li>
+												<li><u><a class="text-hover-image-python" target="_blank" href="https://www.datacamp.com/statement-of-accomplishment/course/b19d944bd5f2a61d66b3ef47f9c0622373d8b76a">Introduction to Python offered by Data Camp</a></u></li>
+												<li><u><a class="text-hover-image-inter-python" target="_blank" href="https://www.datacamp.com/statement-of-accomplishment/course/2e3bd7f07704a259c32ed7d2efa71c34c7e6d1c1">Intermediate Python for Data Science offered by Data Camp</a></u></li>
 											</ul>
 
 										</div><!--//resume-timeline-item-desc-->
@@ -518,6 +519,7 @@
 		var pathToImageDataCamp = "assets/images/datacamp.JPG";
 		var pathToImageThesis = "assets/images/thesis.JPG";
 		var pathToImagePython = "assets/images/python.JPG";
+		var pathToImageInterPython = "assets/images/inter-python.JPG";
 
 		$(".text-hover-image-pay365").hover(function (e) {
 			$("body").append("<p id='image-when-hovering-text-pay365'><img src='" + pathToImagePay365 + "'/></p>");
@@ -819,6 +821,25 @@
 
 		$(".text-hover-image-python").mousemove(function (e) {
 			$("#image-when-hovering-text-python")
+			.css("top", (e.pageY - yOff) + "px")
+			.css("left", (e.pageX + xOff) + "px");
+		});
+
+		$(".text-hover-image-inter-python").hover(function (e) {
+			$("body").append("<p id='image-when-hovering-text-inter-python'><img src='" + pathToImageInterPython + "'/></p>");
+			$("#image-when-hovering-text-inter-python")
+			.css("position", "absolute")
+			.css("top", (e.pageY - yOff) + "px")
+			.css("left", (e.pageX + xOff) + "px")
+			.fadeIn("fast");
+		},
+
+		function () {
+			$("#image-when-hovering-text-inter-python").remove();
+		});
+
+		$(".text-hover-image-inter-python").mousemove(function (e) {
+			$("#image-when-hovering-text-inter-python")
 			.css("top", (e.pageY - yOff) + "px")
 			.css("left", (e.pageX + xOff) + "px");
 		});
