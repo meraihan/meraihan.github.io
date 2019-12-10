@@ -222,6 +222,7 @@
 												<li><u><a class="text-hover-image-inter-python" target="_blank" href="https://www.datacamp.com/statement-of-accomplishment/course/2e3bd7f07704a259c32ed7d2efa71c34c7e6d1c1">Intermediate Python for Data Science offered by Data Camp</a></u></li>
 												<li><u><a class="text-hover-image-python-dscience" target="_blank" href="https://www.datacamp.com/statement-of-accomplishment/course/2856a9ad6f50725fcbc1eb050f1477832b579a97">Python Data Science Toolbox (Part 1)</a></u></li>
 												<li><u><a class="text-hover-image-python-dscience2" target="_blank" href="https://www.datacamp.com/statement-of-accomplishment/course/bfe346de00c4528e39c49e70f60ac9282640fd1f">Python Data Science Toolbox (Part 2)</a></u></li>
+												<li><u><a class="text-hover-image-git" target="_blank" href="https://www.datacamp.com/statement-of-accomplishment/course/faff06a6d3cc6bd63e19a90eb655029b33670323">Introduction to Git for Data Science</a></u></li>
 											</ul>
 
 										</div><!--//resume-timeline-item-desc-->
@@ -525,6 +526,7 @@
 		var pathToImageInterPython = "assets/images/inter-python.JPG";
 		var pathToImagePythonDscience = "assets/images/pythondscience.JPG";
 		var pathToImagePythonDscience2 = "assets/images/pythondscience2.JPG";
+		var pathToImageGit = "assets/images/git-certificate.JPG";
 
 		$(".text-hover-image-pay365").hover(function (e) {
 			$("body").append("<p id='image-when-hovering-text-pay365'><img src='" + pathToImagePay365 + "'/></p>");
@@ -883,6 +885,25 @@
 
 		$(".text-hover-image-python-dscience2").mousemove(function (e) {
 			$("#image-when-hovering-text-pythond2")
+			.css("top", (e.pageY - yOff) + "px")
+			.css("left", (e.pageX + xOff) + "px");
+		});
+
+		$(".text-hover-image-git").hover(function (e) {
+			$("body").append("<p id='image-when-hovering-text-git'><img src='" + pathToImageGit + "'/></p>");
+			$("#image-when-hovering-text-git")
+			.css("position", "absolute")
+			.css("top", (e.pageY - yOff) + "px")
+			.css("left", (e.pageX + xOff) + "px")
+			.fadeIn("fast");
+		},
+
+		function () {
+			$("#image-when-hovering-text-git").remove();
+		});
+
+		$(".text-hover-image-git").mousemove(function (e) {
+			$("#image-when-hovering-text-git")
 			.css("top", (e.pageY - yOff) + "px")
 			.css("left", (e.pageX + xOff) + "px");
 		});
